@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KolaNow-Rwanda Provisional License Exam Practice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light background */
+            color: #334155; /* Dark gray text */
+        }
+        .hero-section {
+            background-image: url('https://images.pexels.com/photos/2833683/pexels-photo-2833683.jpeg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: white;
+            padding: 8rem 0;
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for text readability */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .section-heading {
+            color: #1e3a8a; /* Dark blue for headings */
+            font-weight: 700;
+        }
+        .btn-primary {
+            background-color: #2563eb; /* Blue button */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #1d4ed8; /* Darker blue on hover */
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+        }
+        .faq-item summary {
+            font-weight: 600;
+            cursor: pointer;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .faq-item summary:hover {
+            color: #2563eb;
+        }
+        .faq-item p {
+            padding: 1rem 0;
+            color: #475569;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-white shadow-md py-4 sticky top-0 z-50">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-800">KolaNow</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">About</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+                <a href="#faqs" class="text-gray-700 hover:text-blue-600 font-medium">FAQs</a>
+                <a href="#help" class="text-gray-700 hover:text-blue-600 font-medium">Help</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 shadow-lg">
+            <a href="#home" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home</a>
+            <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
+            <a href="#faqs" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">FAQs</a>
+            <a href="#help" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Help</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section flex items-center justify-center text-center relative">
+            <div class="hero-overlay"></div>
+            <div class="relative z-10 p-6 max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6 drop-shadow-lg">
+                    Master Your Provisional License Exam in Rwanda!
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 drop-shadow-md">
+                    Unlock 3 full practice exams for just <span class="font-bold text-yellow-400">1000 FRW</span>!
+                </p>
+
+                <div class="bg-white p-6 rounded-lg shadow-xl max-w-md mx-auto text-gray-800">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-800">Get Your Access Code in 3 Easy Steps:</h3>
+                    <ol class="list-decimal list-inside text-left text-lg space-y-2 mb-6">
+                        <li>Enter your MTN number below and click "Pay Now".</li>
+                        <li>You will receive a notification on your phone to confirm payment of 1000 FRW.</li>
+                        <li>Confirm the payment, and your unique access code will be sent to you via SMS.</li>
+                    </ol>
+
+                    <input type="tel" placeholder="Enter your MTN number (e.g., 078XXXXXXX)" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4 text-gray-800">
+                    <button class="btn-primary w-full mb-6">Pay Now</button>
+
+                    <p class="text-lg mb-4">
+                        Already have a code? Enter it below to access your exams:
+                    </p>
+                    <input type="text" id="accessCodeInput" placeholder="Enter your code here" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4 text-gray-800">
+                    <button id="accessExamsBtn" class="btn-primary w-full">Access Exams</button>
+                    <p id="message" class="text-sm text-red-500 mt-4 hidden">
+                        Incorrect code. Please try again.
+                    </p>
+                    <p class="text-sm text-gray-600 mt-4">
+                        Each code allows a maximum of 3 trial exams. After 3 attempts, the code will expire.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl section-heading mb-12">Why Choose Us for Your Provisional Exam Prep?</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+                        <img src="https://images.pexels.com/photos/3059748/pexels-photo-3059748.jpeg" alt="Success Rate" class="w-full h-48 object-cover rounded-t-lg mb-4">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-3">Unmatched Success Rates</h3>
+                        <p class="text-gray-600">
+                            Rwanda's provisional license exam can be challenging, with varying success rates. Our platform is designed to significantly improve your odds. Users who complete our trial exams boast an <span class="font-bold text-green-600">85% success rate</span> in the actual provisional exam! We provide you with the knowledge and confidence you need.
+                        </p>
+                    </div>
+                    <div class="card transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+                        <img src="https://images.pexels.com/photos/1631778/pexels-photo-1631778.jpeg" alt="Comprehensive Content" class="w-full h-48 object-cover rounded-t-lg mb-4">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-3">Comprehensive & Up-to-Date Content</h3>
+                        <p class="text-gray-600">
+                            Our practice exams are meticulously crafted to mirror the format and content of the official Rwandan provisional license exam. We constantly update our questions to reflect the latest traffic laws and regulations, ensuring you're always studying the most relevant material.
+                        </p>
+                    </div>
+                    <div class="card transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+                        <img src="https://images.pexels.com/photos/1164778/pexels-photo-1164778.jpeg" alt="Dedicated Support" class="w-full h-48 object-cover rounded-t-lg mb-4">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-3">Dedicated Support Team</h3>
+                        <p class="text-gray-600">
+                            We believe in your success. Our friendly and knowledgeable support team is always ready to assist you with any questions or issues you might encounter. From technical help to clarifying exam concepts, we're here for you every step of the way.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-blue-800 text-white text-center">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Invest in Your Future: Why Pay 1000 FRW?</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">
+                    For just 1000 FRW, you gain access to three high-quality, realistic provisional exam simulations. This small investment can save you time, money, and the frustration of re-taking the official exam. Our trials are your secret weapon for passing on your first attempt!
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                    <div class="bg-white text-blue-800 p-6 rounded-lg shadow-xl max-w-sm">
+                        <h3 class="text-2xl font-bold mb-3">Real Exam Simulation</h3>
+                        <p class="text-gray-700">Experience the exam environment before the big day, reducing anxiety and building confidence.</p>
+                    </div>
+                    <div class="bg-white text-blue-800 p-6 rounded-lg shadow-xl max-w-sm">
+                        <h3 class="text-2xl font-bold mb-3">Targeted Practice</h3>
+                        <p class="text-gray-700">Identify your weak areas and focus your study efforts where they matter most.</p>
+                    </div>
+                    <div class="bg-white text-blue-800 p-6 rounded-lg shadow-xl max-w-sm">
+                        <h3 class="text-2xl font-bold mb-3">Cost-Effective</h3>
+                        <p class="text-gray-700">A minimal fee for maximum preparation, saving you from potential re-exam costs.</p>
+                    </div>
+                </div>
+                <button class="btn-primary mt-10 text-xl px-8 py-4">Get Your Access Code Now!</button>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl section-heading mb-6">Understanding the Provisional Exam in Rwanda</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        The provisional driving license exam in Rwanda is a crucial step towards obtaining your full driving license. It tests your knowledge of road signs, traffic regulations, and safe driving practices. While the national success rate can fluctuate, thorough preparation is key to ensuring you pass.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Many aspiring drivers face challenges due to lack of exposure to diverse question types and insufficient practice under timed conditions. Our platform bridges this gap by offering a realistic simulation of the actual exam, covering all essential topics.
+                    </p>
+                    <img src="https://images.pexels.com/photos/39080/stop-shield-traffic-sign-road-sign-39080.jpeg" alt="Traffic Sign" class="rounded-lg shadow-lg mt-6 w-full h-64 object-cover">
+                </div>
+                <div class="card p-8">
+                    <h3 class="text-2xl font-bold text-blue-700 mb-4">Our Impact on Your Success</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-3">
+                        <li><span class="font-semibold">Improved Confidence:</span> Familiarity with the exam format reduces test-day anxiety.</li>
+                        <li><span class="font-semibold">Knowledge Reinforcement:</span> Repeated practice solidifies your understanding of road rules.</li>
+                        <li><span class="font-semibold">Time Management Skills:</span> Learn to complete the exam efficiently within the given time.</li>
+                        <li><span class="font-semibold">Real-time Feedback:</span> Understand your mistakes and learn from them instantly (feature for backend).</li>
+                        <li><span class="font-semibold">Higher Pass Rate:</span> Our users consistently achieve higher success rates compared to the national average.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="faqs" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl section-heading text-center mb-12">Frequently Asked Questions</h2>
+                <div class="max-w-3xl mx-auto">
+                    <details class="faq-item mb-4">
+                        <summary>How do I get an access code?</summary>
+                        <p>
+                            You can obtain an access code by paying 1000 FRW through our designated payment channels (details will be provided on the payment page). Once your payment is confirmed, the code will be sent to you via SMS or a confirmation message.
+                        </p>
+                    </details>
+                    <details class="faq-item mb-4">
+                        <summary>How many exams can I take with one code?</summary>
+                        <p>
+                            Each code grants you access to a maximum of 3 provisional license practice exams. After completing three exams, the code will expire, and you will need to purchase a new one to continue practicing.
+                        </p>
+                    </details>
+                    <details class="faq-item mb-4">
+                        <summary>Is the content updated regularly?</summary>
+                        <p>
+                            Yes, absolutely! We constantly monitor changes in Rwandan traffic laws and regulations to ensure our practice questions are always up-to-date and relevant to the current provisional exam.
+                        </p>
+                    </details>
+                    <details class="faq-item mb-4">
+                        <summary>What if I encounter a technical issue?</summary>
+                        <p>
+                            Our dedicated support team is here to help! Please reach out to us via the contact form below, or use the provided contact details in the Help section. We aim to respond promptly to all inquiries.
+                        </p>
+                    </details>
+                    <details class="faq-item mb-4">
+                        <summary>Can I use the code on multiple devices?</summary>
+                        <p>
+                            The code is typically linked to your session or the device used for entry. We recommend using it on a single device for the best experience.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 bg-gradient-to-tr from-blue-700 to-indigo-900 text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Get in Touch With Us</h2>
+                <p class="text-lg mb-8 max-w-2xl mx-auto">
+                    Have questions, feedback, or need assistance? Our support team is ready to help you succeed. Fill out the form below or reach out directly.
+                </p>
+                <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-xl text-gray-800">
+                    <form>
+                        <div class="mb-4 text-left">
+                            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="John Doe">
+                        </div>
+                        <div class="mb-4 text-left">
+                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Your Email</label>
+                            <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="you@example.com">
+                        </div>
+                        <div class="mb-6 text-left">
+                            <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Type your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full py-3">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center md:flex md:justify-between md:items-center">
+            <div class="mb-4 md:mb-0">
+                <p>&copy; 2025 Provisional Prep. All rights reserved.</p>
+            </div>
+            <div class="flex flex-wrap justify-center md:justify-end space-x-6">
+                <a href="#home" class="text-gray-300 hover:text-white">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-white">About</a>
+                <a href="#contact" class="text-gray-300 hover:text-white">Contact</a>
+                <a href="#faqs" class="text-gray-300 hover:text-white">FAQs</a>
+                <a href="#help" class="text-gray-300 hover:text-white">Help</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Toggle mobile menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- NEW CODE ADDED HERE ---
+        // Function to handle the "Access Exams" button click
+        document.getElementById('accessExamsBtn').addEventListener('click', function() {
+            const codeInput = document.getElementById('accessCodeInput');
+            const message = document.getElementById('message');
+
+            if (codeInput.value === 'investor1234') {
+                // If the code is correct, open the file in a new tab
+                window.open('kolanowquiz.html', '_blank');
+                // Hide any previous error messages
+                message.classList.add('hidden');
+            } else {
+                // If the code is incorrect, display an error message
+                message.textContent = 'Incorrect code. Please try again.';
+                message.classList.remove('hidden');
+            }
+        });
+        // --- END OF NEW CODE ---
+    </script>
+</body>
+</html>
